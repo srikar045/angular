@@ -46,9 +46,11 @@ export class AddEmpComponent implements OnInit {
     this.user.mobile=this.RegForm.value.mobile;
     this.user.username=this.RegForm.value.username;
     this.user.password=this.RegForm.value.password;
+   
     this.ser.create(this.user).subscribe((response)=>
     {console.log(response);},
     (error=>{console.log(error);}));
     this.router.navigate(['/admin/view']);
+    window.location.reload;
   }
 }
