@@ -1,0 +1,70 @@
+<body>
+    <div>
+        <button mat-button class="menu-button" (click)="add()">
+            <mat-icon>account_box</mat-icon>
+            <span>AddUser</span>
+        </button>
+        <button mat-button class="menu-button" (click)="data()">
+            <mat-icon>menu</mat-icon>
+            <span>AllUsers</span>
+        </button>
+        <div class="search">
+            
+                <input type="number" class="search-in"  [(ngModel)]="id" placeholder="Enter EID">
+                <button mat-button class="menu-button" (click)="search()">
+                    <mat-icon>search</mat-icon>
+                    <span>SearchUser</span>
+                </button>
+            
+        </div>
+    </div>
+    <hr>
+    <div>
+        {{userdatas | json}}
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Gender</th>
+                    <th>Mobile</th>
+                    <th>Mail</th>
+                    <th>UserName</th>
+                    <th>Password</th>
+                    <th>Created</th>
+                    <th>Created_on</th>
+                    <th>Updated</th>
+                    <th>Updated_on</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of userdata">
+                    <td>{{data.eid}}</td>
+                    <td>{{data.fname}}</td>
+                    <td>{{data.lname}}</td>
+                    <td>{{data.gender}}</td>
+                    <td>{{data.mobile}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.username}}</td>
+                    <td>{{data.password}}</td>
+                    <td>{{data.created_by}}</td>
+                    <td>{{data.created_on | date:'dd/MM/yy'}}</td>
+                    <td>{{data.updated_by}}</td>
+                    <td>{{data.updated_on | date:'dd/MM/yy'}}</td>
+                    <td>
+                        <button mat-icon-button (click)="edit(data)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="delete(data.eid)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

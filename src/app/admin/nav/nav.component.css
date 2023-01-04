@@ -1,0 +1,17 @@
+/* mat-toolbar{
+    justify-content: space-between;
+} */
+mat-icon{
+    margin-left: 15px;
+    color: bisque;
+}
+.box{
+    margin: 15px;
+}
+button{
+    color: black;
+}
+mat-toolbar{
+    background-color: gray;
+}
+

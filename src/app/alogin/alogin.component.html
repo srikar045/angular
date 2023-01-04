@@ -1,0 +1,59 @@
+<body [ngClass]="{'green' : class, 'red': !class}">
+    <div class="log">
+        <table>
+            <tr>
+                <td>
+                    <img src="../../../assets/adminlog.jpg" alt="some logo">
+                    <p>Welcome Admin <br> Login to Continue</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form #login="ngForm" (ngSubmit)="onSubmit(login.value)">
+                        <div>
+                            <label class="lable" for="UserName">UserName : </label>
+                            <input type="text" required ngModel name="UserName" placeholder="Username"
+                                #UserName="ngModel">
+                            <div *ngIf="UserName.touched && !UserName.valid">
+                                <div *ngIf="UserName.errors?.required"> UserName Can't be Empty</div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="lable" for="password">Password : </label>
+                            <input type="password" required ngModel name="password" placeholder="Password"
+                                #password="ngModel">
+                            <div *ngIf="password.touched && !password.valid">
+                                <div *ngIf="password.errors?.required">Password Can't be Empty</div>
+                            </div>
+                        </div>
+                        <div>
+                            <button mat-button type="submit"
+                                [disabled]="!login.valid">Login</button>
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                <button [routerLink]="['']">
+                                Back
+                                </button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>{{msg}}</h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>

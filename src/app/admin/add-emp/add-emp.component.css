@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid rgb(58, 58, 237);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    padding: 10px;
+    background-color:whitesmoke ;
+}
+.div{
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}

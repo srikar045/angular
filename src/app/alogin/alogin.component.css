@@ -1,0 +1,74 @@
+.green{
+    /* background-image: url("../../assets/bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background: linear-gradient(125deg,skyblue,lightpink,rgb(243, 66, 66),whitesmoke ,blue );
+   
+    }
+    .red{
+        /* background-image: url("../../assets/bg2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; */
+        background: linear-gradient(red,black,red);
+    }
+    h3{
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    .log{
+        background-color:transparent;
+        display: flex;
+        position: absolute;
+        /* float: left; */
+        margin-top: 25px;
+        margin-left: 40px;
+        padding: 25px;
+        box-sizing: border-box;
+        border: 0.75px solid black;
+        border-radius: 20px;
+        border-style: dashed;
+        height: 80vh;
+    }
+    img{
+    margin-left: 35px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;    
+    }
+    p{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        text-align: center;
+    }
+    .lable{
+        font-size: medium;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 500;
+    }
+    input{
+        height: 25px;
+        padding-left:20px ;
+        font-size: large;
+        border-radius: 25px;
+        border: 1px solid bisque;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: aliceblue;
+    }
+    button{
+        background-color: transparent;
+        border-radius: 20px;
+        width: 75px;
+        height: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: medium;
+        font-weight: 700;
+       border:transparent;
+    }
+    button:hover{
+        margin-top: 10px;
+        border:1px solid whitesmoke;
+        cursor: pointer;
+    }
