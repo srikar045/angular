@@ -1,0 +1,33 @@
+<body>
+<div class="content">
+    <h1>Reserve Your booking</h1>
+    <p>Room Id: {{id}}</p>
+    <hr>
+    <div class="input">
+        
+            <input class="ip" type="text" [(ngModel)]="title" name="title" placeholder=" enter title" />
+            <br>
+            <input class="ip" type="datetime-local" [(ngModel)]="start" name="start time" />
+            <br>
+            <input class="ip" type="datetime-local" [(ngModel)]="end" name="end time" /><br>
+        
+    </div>
+    <form [formGroup]="reactform" (ngSubmit)="ProceedSave()">
+
+        <div class="tbody" formArrayName="deladdress">
+            <div class="tr" *ngFor="let item of deladdress.controls;let i=index" [formGroupName]="i">
+                <input class="id" placeholder="Id" formControlName="id"><br>
+                <button mat-button color="accent" (click)="Removeitem(i)">(-)</button>
+            </div>
+        </div>
+        <div>
+            <button class="add" (click)="Addnewrow()">Add new(+)</button>
+        </div>
+
+    </form>
+    <div class="space">
+    <button type="submit" class="button" (click)="onclick()"> Submit</button><br>
+    <button type="button" class="btn1" [routerLink]="['../../mlview']"> Cancel</button>
+</div>
+</div>
+</body>

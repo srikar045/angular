@@ -1,0 +1,56 @@
+.extra{
+    flex: 1 1 auto;
+}
+   .logo{
+    margin-left:20px ;
+   }
+   .sidenav-wrapper{
+    position: absolute;
+    top:60px;
+    bottom: 0;
+    left:0;
+    right:0;
+    /* background-color:azure; */
+    background: linear-gradient(90deg, rgba(45,52,54,1.0),rgba(232,67,147,1.0));
+
+    
+   }
+   mat-sidenav{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    background-color: rgb(178, 219, 234);
+   }
+   
+   mat-sidenav-content{
+   height: auto;
+    font-size: 24px;
+/* background:#0c192c; */
+background: linear-gradient(90deg, rgba(45,52,54,1.0),rgba(232,67,147,1.0));
+
+
+   }
+   button span{
+    margin: 10px;
+   }
+   .t{
+       background-color: rgb(203, 145, 167);
+/* background:#0c192c; */
+       
+   }
+   .b{
+       color:white;
+   }
+   .l{
+       color:white;
+   }
+   .room{
+       color:black;
+   }
+   .book{
+       color:black;
+   }
+   .home{
+       color:black;
+   }

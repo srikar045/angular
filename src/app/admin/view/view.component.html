@@ -4,25 +4,45 @@
             <mat-icon>account_box</mat-icon>
             <span>AddUser</span>
         </button>
-        <button mat-button class="menu-button" (click)="data()">
+        <button mat-button class="menu-button" (click)="data()" (click)="accordion.closeAll()">
             <mat-icon>menu</mat-icon>
             <span>AllUsers</span>
         </button>
         <div class="search">
-            
-                <input type="number" class="search-in"  [(ngModel)]="id" placeholder="Enter EID">
-                <button mat-button class="menu-button" (click)="search()">
-                    <mat-icon>search</mat-icon>
-                    <span>SearchUser</span>
-                </button>
-            
+
+            <input type="number" class="search-in" [(ngModel)]="eid"  placeholder="Enter EID">
+            <button mat-button class="menu-button" (click)="search()" (click)="accordion.openAll()">
+                <mat-icon>search</mat-icon>
+                <span>SearchUser</span>
+            </button>
+
         </div>
     </div>
     <hr>
-    <div>
-        {{userdatas | json}}
+    <div >
+        <mat-accordion multi >
+            <mat-expansion-panel class="accordion">
+                <table *ngIf="userdatas!=null">
+                    <tr>
+                        <td>{{userdatas.eid}}</td>
+                        <td>{{userdatas.fname}}</td>
+                        <td>{{userdatas.lname}}</td>
+                        <td>{{userdatas.gender}}</td>
+                        <td>{{userdatas.mobile}}</td>
+                        <td>{{userdatas.email}}</td>
+                        <td>{{userdatas.username}}</td>
+                        <!-- <td>{{userdatas.password}}</td> -->
+                        <td>{{userdatas.role[0].role }}</td>
+                        <td>{{userdatas.created_by}}</td>
+                        <td>{{userdatas.created_on | date:'dd/MM/yy'}}</td>
+                        <td>{{userdatas.updated_by}}</td>
+                        <td>{{userdatas.updated_on | date:'dd/MM/yy'}}</td>
+                        </tr>
+            </table>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
-    <div>
+    <div class="big">
         <table>
             <thead>
                 <tr>
@@ -33,7 +53,8 @@
                     <th>Mobile</th>
                     <th>Mail</th>
                     <th>UserName</th>
-                    <th>Password</th>
+                    <!-- <th>Password</th> -->
+                    <th>Role</th>
                     <th>Created</th>
                     <th>Created_on</th>
                     <th>Updated</th>
@@ -50,16 +71,18 @@
                     <td>{{data.mobile}}</td>
                     <td>{{data.email}}</td>
                     <td>{{data.username}}</td>
-                    <td>{{data.password}}</td>
+                    <!-- <td>{{data.password}}</td> -->
+                    <td> {{data.role[0].role }}</td>
                     <td>{{data.created_by}}</td>
                     <td>{{data.created_on | date:'dd/MM/yy'}}</td>
                     <td>{{data.updated_by}}</td>
                     <td>{{data.updated_on | date:'dd/MM/yy'}}</td>
                     <td>
-                        <button mat-icon-button (click)="edit(data)">
+                        <button mat-icon-button (click)="edit(data.eid)">
                             <mat-icon>edit</mat-icon>
                         </button>
-                        <button mat-icon-button (click)="delete(data.eid)">
+                        <!-- "delete(data.eid)" -->
+                        <button mat-icon-button (click)="handleWarningAlert(data.eid)">
                             <mat-icon>delete</mat-icon>
                         </button>
                     </td>

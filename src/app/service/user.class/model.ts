@@ -7,8 +7,10 @@ export class User {
     mobile:number=0;
     username:string='';
     password:string='';
-    createdBy:string='';
-    created:any;
-    updatedBy:string='';
-    updated:any;
+    created_by:string='';
+    created_on:any;
+    updated_by:string='';
+    updated_on:any;
+
+    role:any=[{role_id:0,role:''}];
 }  

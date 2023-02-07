@@ -1,0 +1,59 @@
+
+<div class="box">
+    <a class="book" [routerLink]="['../mlbooking']">
+        <button mat-button color="warn">
+            <mat-icon>book</mat-icon>
+            <span>Bookings</span>
+        </button>
+    </a>
+    <hr>
+    <div class="cont" *ngFor="let book of Book;let i=index">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    <h1 class="hb">Booking ID {{book.bid}}</h1>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <table>
+                    <tr>
+                        <td class="h">Title</td>
+                        <td class="d">: {{book.title}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h" >Start time </td>
+                        <td class="d">: {{book.start | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">End time</td>
+                        <td class="d">: {{book.end | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="h">Created By</td>
+                        <td class="d">: {{book.eid.fname}}.{{book.eid.lname}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Created On</td>
+                        <td class="d">: {{book.createdon | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Updated By</td>
+                        <td class="d">: {{book.upated}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Updated On</td>
+                        <td class="d">: {{book.upatedon | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                </table>
+
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="but">
+                <button type="button" class="bt" (click)="book1(book.bid)">Update</button>
+                <button type="button" class="bt1" (click)="delete(book.bid)">Delete</button>
+            </div>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

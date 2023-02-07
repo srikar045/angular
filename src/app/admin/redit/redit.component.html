@@ -1,0 +1,61 @@
+<div class="one">
+    <div class="container">
+        <form [formGroup]="RoomForm" (ngSubmit)="onSubmit()">
+            <!-- <div class="div">
+            <span>Room ID</span>
+            <input type="number" formControlName="roomId"
+            [ngClass]="{'is-invalid':sub && c.roomId.errors}" placeholder="Room ID"/>
+            <div *ngIf="sub && c.roomId.errors" class="feedback">
+                <div *ngIf="c.roomId.errors.required">Room Id can't be empty</div>
+            </div>
+        </div> -->
+            <div class="div">
+                <span class="col-25">Room Name </span>
+
+                <div class="col-75">
+
+                    <input type="text" formControlName="name" [ngClass]="{'is-invalid':sub && c.name.errors}"
+                        placeholder="Room Name" />
+
+                    <div *ngIf="sub && c.name.errors" class="feedback">
+                        <div *ngIf="c.name.errors.required">Room Name can't be empty</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="div">
+                <span class="col-25">Room Floor</span>
+
+                <div class="col-75">
+
+                    <input type="number" formControlName="floor" [ngClass]="{'is-invalid':sub && c.floor.errors}"
+                        placeholder="Room Floor" />
+
+                    <div *ngIf="sub && c.floor.errors" class="feedback">
+                        <div *ngIf="c.floor.errors.required">Room Floor can't be empty</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="div">
+                <span class="col-25">Room Capacity</span>
+
+                <div class="col-75">
+
+                    <input type="number" formControlName="capacity" [ngClass]="{'is-invalid':sub && c.capacity.errors}"
+                        placeholder="Room Capacity" />
+
+                    <div *ngIf="sub && c.capacity.errors" class="feedback">
+                        <div *ngIf="c.capacity.errors.required">Room Capacity can't be empty</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="butt">
+                <button mat-raised-button color="warn" type="button" [routerLink]="['/admin/roomview']">Back</button>
+                <button mat-raised-button color="primary" type="submit">Update</button>
+            </div>
+        </form>
+
+    </div>
+</div>

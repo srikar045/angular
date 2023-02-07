@@ -1,8 +1,9 @@
+<div class="one">
 <div class="container">
     <form [formGroup]="RegForm" (ngSubmit)="onSubmit()">
         <div class="div">
             <span>FirstName : </span>
-            <input type="text" formControlName="firstname" class="form-control"
+            <input type="text" formControlName="firstname" class="form-control" value="user.fname"
                 [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
             <div *ngIf="submitted  && f.firstname.errors" class="invalid-feedback">
                 <div *ngIf="f.firstname.errors.required">First Name is required</div>
@@ -29,7 +30,7 @@
         <div class="div">
             <span>Email : </span>
             <input type="email" formControlName="email" class="form-control"
-            [ngClass]="{'is-invalid':submitted && f.email.errors}" />
+                [ngClass]="{'is-invalid':submitted && f.email.errors}" />
             <div *ngIf="submitted  && f.email.errors" class="invalid-feedback">
                 <div *ngIf="f.email.errors.required">Email is required</div>
                 <div *ngIf="f.email.errors.email">Invalid Email</div>
@@ -37,8 +38,8 @@
         </div>
         <div class="div">
             <span>Mobile : </span>
-            <input type="text" formControlName="mobile" class="form-control" 
-            [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+            <input type="text" formControlName="mobile" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
             <div *ngIf="submitted  && f.mobile.errors" class="invalid-feedback">
                 <div *ngIf="f.mobile.errors.required">First Name is required</div>
             </div>
@@ -50,18 +51,44 @@
             <div *ngIf="submitted  && f.username.errors" class="invalid-feedback">
                 <div *ngIf="f.username.errors.required">UserName is required</div>
             </div>
-        </div> <div class="div">
+        </div>
+        <div class="div" *ngIf="isAddMode">
             <span>Password : </span>
-            <input type="password" formControlName="password" class="form-control"
+            <input type="password" formControlName="password" class="form-control" 
                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
             <div *ngIf="submitted  && f.password.errors" class="invalid-feedback">
                 <div *ngIf="f.password.errors.required">Password is required</div>
                 <div *ngIf="f.password.errors.minLength">Password min length of 6 is required</div>
             </div>
         </div>
-        <div class="div">
-            <button mat-raised-button color="primary">UPDATE</button>
-            <!--[disabled]="!RegForm.valid"-->
+       
+        <div class="div" *ngIf="!isAddMode">
+            <span>Role : </span>
+            <input type="radio" formControlName="Erole" class="form-control" [value]="20"
+                name="Erole" /><span>Manager</span>
+            <input type="radio" formControlName="Erole" class="form-control" [value]="30"
+                name="Erole" /><span>Lead</span>
+            <input type="radio" formControlName="Erole" class="form-control" [value]="40"
+                name="Erole" /><span>Employee</span>
+            <div *ngIf="submitted  && f.Erole.errors" class="invalid-feedback">
+                <div *ngIf="f.Erole.errors.required">Role is required</div>
+            </div>
+        </div>
+        <div class="butt">
+            <button mat-raised-button type="submit" [disabled]="!RegForm.valid" color="primary">SAVE</button>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="waran" type="button" [routerLink]="['/admin/view']">CANCLE</button>
+        
         </div>
     </form>
 </div>
+ <!-- <div>
+            <span>Role : </span>
+            <input type="text" formControlName="role" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.role.errors }" />
+        </div>
+        <div>
+            <span>Roles : </span>
+            <input type="text" formControlName="roles" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.roles.errors }" />
+        </div> -->

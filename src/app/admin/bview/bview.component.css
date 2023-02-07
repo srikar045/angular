@@ -1,0 +1,96 @@
+.loop{
+    display: flex;
+    float: left;
+    position: relative;
+    width: 46%;
+    margin: 1%;
+    margin-left: 3%;
+}
+
+.card{
+    width: 70vh;
+    height: 80vh;
+    border-radius: 18%;
+    background: linear-gradient(175deg, rgba(190, 185, 185, 0.379), rgba(179, 176, 176, 0.59)), url("../../../assets/cardbg.webp");
+  /* background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+); */
+}
+/* .card:after{
+    background: url("../../../assets/cardbg.webp");
+    -webkit-filter: brightness(90%) contrast(90%) blur(2px) grayscale(10%);
+    filter: brightness(90%) contrast(90%) blur(2px) grayscale(10%);    
+} */
+.head{
+ justify-content: center;
+ background-color: antiquewhite;
+ padding-top: 3%;
+ padding-right: 10%;
+ border: 1px solid transparent;
+ border-radius: 50%;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: larger;
+}
+
+.data{ 
+    padding-top: 2%;
+}
+
+.table{
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid salmon; */
+    /* border-collapse: collapse; */
+    padding-left: 10%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    width: 100%;
+    height: 100%;
+    line-height: 250%;
+    /* font-weight: 600; */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.tdhr{
+    /* border: 1px solid black; */
+     font-size: larger;
+     font-weight: 800;
+}
+.tds{
+    font-size: larger;
+   text-decoration: underline;
+   font-weight: 500;
+   color: rgb(255, 236, 212);
+
+}
+
+.tdh{
+    font-weight: 800;
+    font-size: larger;
+}
+.tdd{
+    font-size: larger;
+    font-weight: 500;
+    color: rgb(255, 236, 212);
+}
+
+.action{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+  transform: scale(1.3);
+  color: rgba(255, 132, 0, 0.712);
+}

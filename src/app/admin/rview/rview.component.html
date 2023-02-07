@@ -1,0 +1,60 @@
+<div class="box">
+    <button *ngIf="show" mat-button [routerLink]="['/admin/roomadd']">
+        <mat-icon>add</mat-icon>
+        <span>ADD_ROOM</span>
+    </button>
+    <hr>
+    <div class="view" *ngFor="let room of rdata;let i=index">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title><h1>Room {{i+1}}</h1></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                    <table>
+                        <tr>
+                            <td>Room ID</td>
+                            <td>: {{room.roomId}}</td>    
+                        </tr>   
+                        <tr>
+                            <td>Room Name </td>
+                            <td>: {{room.name}}</td>
+                        </tr> 
+                        <tr>
+                            <td>Floor Num</td>
+                            <td>: {{room.floor}}</td>
+                        </tr>
+                        <tr>
+                            <td>Room Capacity</td>
+                            <td>: {{room.capacity}}</td>
+                        </tr>
+                        <tr>
+                            <td>Created By</td>
+                            <td>: {{room.created_by}}</td>
+                        </tr>
+                        <tr>
+                            <td>Created On</td>
+                            <td>: {{room.created_on | date:'dd/MM/yyyy'}}</td>
+                        </tr>
+                        <tr>
+                            <td>Updated By</td>
+                            <td>: {{room.updated_by}}</td>
+                        </tr>
+                        <tr>
+                            <td>Updated On</td>
+                            <td>: {{room.updated_on | date:'dd/MM/yyyy'}}</td>    
+                        </tr>
+                </table>
+               
+            </mat-card-content>
+            <mat-card-actions >
+                <button *ngIf="show" mat-raised-button color="primary" type="button" (click)="edit(room.roomId)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-button style="border: 1px solid black;" (click)="book(room.roomId)">  
+                    <mat-icon>event</mat-icon>
+              </button>
+                <button *ngIf="show" mat-raised-button color="warn" type="button" (click)="handleWarningAlert(room.roomId)"><mat-icon>delete</mat-icon></button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

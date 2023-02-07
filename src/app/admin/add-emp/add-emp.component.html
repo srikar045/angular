@@ -1,25 +1,32 @@
+<div class="head">
+    <h1>Employee Data</h1>
+    </div>
 <div class="container">
     <form [formGroup]="RegForm" (ngSubmit)="onSubmit()">
         <div class="div">
-            <span>FirstName : </span>
+            <span>FirstName  </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" formControlName="firstname" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+                [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" placeholder="FirstName" />
             <div *ngIf="submitted  && f.firstname.errors" class="invalid-feedback">
                 <div *ngIf="f.firstname.errors.required">First Name is required</div>
             </div>
         </div>
         <div class="div">
-            <span>LastName : </span>
+            <span>LastName  </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" formControlName="lastname" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+                [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" placeholder="LastName"/>
             <div *ngIf="submitted  && f.lastname.errors" class="invalid-feedback">
                 <div *ngIf="f.lastname.errors.required">Last Name is required</div>
             </div>
         </div>
         <div class="div">
-            <span>Gender : </span>
+            <span>Gender  </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="radio" formControlName="gender" class="form-control" value="male"
                 name="gender" /><span>Male</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="radio" formControlName="gender" class="form-control" value="female"
                 name="gender" /><span>Female</span>
             <div *ngIf="submitted  && f.gender.errors" class="invalid-feedback">
@@ -27,42 +34,48 @@
             </div>
         </div>
         <div class="div">
-            <span>Email : </span>
+            <span>Email  </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="email" formControlName="email" class="form-control"
-            [ngClass]="{'is-invalid':submitted && f.email.errors}" />
+            [ngClass]="{'is-invalid':submitted && f.email.errors}" placeholder="E-Mail"/>
             <div *ngIf="submitted  && f.email.errors" class="invalid-feedback">
                 <div *ngIf="f.email.errors.required">Email is required</div>
                 <div *ngIf="f.email.errors.email">Invalid Email</div>
             </div>
         </div>
         <div class="div">
-            <span>Mobile : </span>
-            <input type="text" formControlName="mobile" class="form-control" 
-            [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+            <span>Mobile  </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" formControlName="mobile" class="form-control" 
+            [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" placeholder="Contact"/>
             <div *ngIf="submitted  && f.mobile.errors" class="invalid-feedback">
                 <div *ngIf="f.mobile.errors.required">First Name is required</div>
             </div>
         </div>
         <div class="div">
-            <span>UserName : </span>
+            <span>UserName  </span>
+            &nbsp;&nbsp;&nbsp;
             <input type="text" formControlName="username" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="UserName"/>
             <div *ngIf="submitted  && f.username.errors" class="invalid-feedback">
                 <div *ngIf="f.username.errors.required">UserName is required</div>
             </div>
         </div> <div class="div">
-            <span>Password : </span>
+            <span>Password  </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="password" formControlName="password" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password"/>
             <div *ngIf="submitted  && f.password.errors" class="invalid-feedback">
                 <div *ngIf="f.password.errors.required">Password is required</div>
                 <div *ngIf="f.password.errors.minLength">Password min length of 6 is required</div>
             </div>
         </div>
         <div class="div">
-            <button mat-raised-button color="primary">ADD</button>
-            <!--[disabled]="!RegForm.valid"-->&nbsp;&nbsp;&nbsp;&nbsp;
-            <button mat-raised-button color="warn" [routerLink]="['/admin/view']">CANCLE</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" mat-raised-button [disabled]="!RegForm.valid" color="primary">ADD</button>
+            <!--[disabled]="!RegForm.valid"-->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="warn" [routerLink]="['/admin/view']">CANCEL</button>
 
         </div>
     </form>

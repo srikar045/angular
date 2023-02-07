@@ -1,0 +1,37 @@
+<mat-toolbar class="t">
+    <button  class="b" mat-icon-button (click)="nav.toggle()"> <mat-icon>menu</mat-icon></button>
+     <div class="extra"></div>
+     <mat-icon class="l" (click)="logout()">logout</mat-icon>
+ </mat-toolbar>
+ <mat-sidenav-container class="sidenav-wrapper">
+     <mat-sidenav #nav mode="over">
+
+         <a class="home"v [routerLink]="['./mlhome']">
+             <button mat-button >
+                 <mat-icon>home</mat-icon>
+                 <span>Home</span>
+             </button>
+         </a><br>
+         <div class="room">
+         <a  class="room" [routerLink]="['./roomview']" >
+             <button mat-button>
+                 <mat-icon>event_seat</mat-icon>
+                 <span>Rooms</span>
+             </button>
+         </a><br>
+        </div>
+ 
+         <a class="book" [routerLink]="['./mlbooking']">
+             <button mat-button>
+                 <mat-icon>book</mat-icon>
+                 <span>Booking</span>
+             </button>
+         </a>
+        
+     </mat-sidenav>
+     <mat-sidenav-content>
+        <div class="main">
+         <router-outlet></router-outlet>
+        </div>
+     </mat-sidenav-content>
+ </mat-sidenav-container>

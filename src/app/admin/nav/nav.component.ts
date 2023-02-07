@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlogService } from 'src/app/service/alog.service';
+import { UserServiceService } from 'src/app/service/user-service.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,12 +10,12 @@ import { AlogService } from 'src/app/service/alog.service';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private ser:AlogService,private router:Router) { }
+  constructor(private ser:AlogService,private router:Router,private serv:UserServiceService) { }
   title='hello all';
   ngOnInit(): void {
   }
 logout(){
-this.router.navigate(['']);
-this.ser.logout;
+  this.serv.clear();
+  this.router.navigate(['']);
 }
 }

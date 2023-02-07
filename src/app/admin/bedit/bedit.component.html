@@ -1,0 +1,84 @@
+<body>
+  <div class="main">
+
+    <mat-card>
+      <table>
+        <tr>
+          <td>
+            Title
+          </td>
+          <td>
+            : {{data.title}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Room
+          </td>
+          <td>
+            : {{rid}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Floor
+          </td>
+          <td>
+            : {{floor}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Host ID
+          </td>
+          <td>
+            : {{emp}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Host Name
+          </td>
+          <td>
+            : {{fname}} . {{lname}}
+          </td>
+        </tr>
+      </table>
+      <button style="margin-left: 70%;" mat-raised-button color="warn" [routerLink]="['/admin/bookview']">BACK</button>
+    </mat-card>
+    <div class="edit">
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Change Title
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="title">
+            <form (ngSubmit)="edit()">
+              <input type="text" name="title" [(ngModel)]="title" />
+              <button *ngIf="false" mat-raised-button color="primary" type="submit">EDIT</button>
+            </form>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Change Time
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="time">
+            <form (ngSubmit)="edittime()">
+              <label>Start : </label> <input type="datetime-local" [ngModel]="start | date:'yyyy-MM-ddTHH:mm'"
+                (ngModelChange)="start=$event" id="start" name="start" />
+              <label>End :</label> <input type="datetime-local" [ngModel]="end | date:'yyyy-MM-ddTHH:mm'"
+                (ngModelChange)="end=$event" id="end" name="end" />
+              <br>
+              <button mat-raised-button color="primary" type="submit">EDIT</button>
+            </form>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</body>

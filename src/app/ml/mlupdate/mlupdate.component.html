@@ -1,0 +1,20 @@
+<body>
+<div class="cont">
+    <button class="close" [routerLink]="['../../mlbooking']">&times;</button>
+<div class="box">
+    <h2>Updat Form BID : {{id}}</h2>
+    <hr>
+    <div class="t">
+       <label>Title </label> <input type="text" [(ngModel)]="title" placeholder="enter title"><br><br>
+        <button (click)="titlechange()">change</button><br><br>
+    </div>
+    <hr>
+    <div class="b">
+      <label>Start Time</label>  <input type="datetime-local" [(ngModel)]="starttime"><br><br>
+      <label>End Time</label>&nbsp;
+        <input type="datetime-local" [(ngModel)]="endtime"><br><br>
+        <button (click)="timechange()">submit</button>
+    </div>
+</div>
+</div>
+</body>

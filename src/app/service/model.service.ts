@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class ModelService {
 
   constructor() { }
+  role:any=[{role_id:40,role:"Employee"}];
+
   uid:number=0;
   fname:string='';
   lname:string='';
@@ -21,6 +23,8 @@ export class ModelService {
 
 
   id(data:any){
+    this.role=data.role;
+
     this.uid=data.eid;
     this.fname=data.fname;
     this.lname=data.lname;

@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <head>
 
     </head>
@@ -9,4 +9,54 @@
             <button mat-button>Employee</button>
         </div>
     </body>
-</html>
+</html> -->
+<!-- <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <span>StratApps</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button mat-button color="primary" routerLink="/login">
+        <mat-icon>login</mat-icon>
+        <span>Login</span>
+    </button>
+
+</mat-toolbar> -->
+
+<body >
+    <div class="cont">
+    <div class="nav">
+        <mat-toolbar >   
+          <a [routerLink]="['/home']"><i><img src="../../assets/onlyLogo.jpg"></i></a>
+          <a [routerLink]="['/home']"><span>StratApps</span></a>
+            <span class="example-spacer"></span>
+            <div class="butt">
+                <div>
+                    <button mat-button routerLink="/home/h">
+                        <mat-icon>home</mat-icon>
+                        <span>Home</span>
+                    </button>
+                    <button mat-button routerLink="/home/a">
+                        <mat-icon>info</mat-icon>
+                        <span>About</span>
+                    </button>
+                    <button mat-button routerLink="/home/c">
+                        <mat-icon>perm_phone_msg</mat-icon>
+                        <span>Contact</span>
+                    </button>
+                </div>
+                <div class="right">
+                    <button mat-raised-button mat-button  routerLink="/login">
+                        <mat-icon>login</mat-icon>
+                        <span style="padding: 4px;margin-left: 3px;">Login</span>
+                    </button>
+                </div>
+            </div>
+        </mat-toolbar>
+    </div>
+    <div class="content">
+        
+    <router-outlet></router-outlet>
+</div>
+</div>
+</body>

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sub{
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    background-color: rgb(248, 223, 188);
+    width: 25%;
+    height: 45%;
+    padding: 1%;
+    border: 1px solid goldenrod;
+    border-radius: 5%;
+    margin-left: 35%;
+    margin-top: 4%;
+}
+
+.tbody {
+    position: relative;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 85%;
+    height: 80px;
+    margin-left: 15%;
+}
+
+.tr {
+    display: flex;
+}
+
+
+.ip {
+    width: 60%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid #c7c1c1;
+    outline: none;
+    border-radius: 30px;
+    margin: 10px 0;
+    margin-left: 19%;
+    background-color: white;
+    color: black;
+}
+.add1{
+    width: 100%;
+    margin-left: 34%;
+}
+.add {
+    width: 25%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    border: 1px solid #c7c1c1;
+    outline: none;
+    border-radius: 30px;
+    margin: 10px 0;
+    background-color: rgb(201, 236, 134);
+    margin-left: 38%;
+   
+}
+
+.id {
+    display: flex;
+    position: relative;
+    width: 62%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid #c7c1c1;
+    outline: none;
+    border-radius: 30px;
+    margin: 10px 0;
+    margin-left: 18%;
+    background-color: aliceblue;
+}
+
+.button {
+    width: 35%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid #c7c1c1;
+    outline: none;
+    border-radius: 30px;
+    margin: 10px 0;
+    background-color: rgb(24, 134, 207);
+    /* margin-left: 25%;
+    } */
+}
+
+.btn1 {
+    width: 35%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid #c7c1c1;
+    outline: none;
+    border-radius: 30px;
+    margin: 10px 0;
+    background-color: darksalmon;
+}
+.rem{
+    color: black;
+    font-size: larger;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 4px;
+    width: 9%;
+    background: white;
+    border: 0.5px solid  white;
+  
+}
+p{
+    margin-right: 15%;
+    margin-top: 2%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}

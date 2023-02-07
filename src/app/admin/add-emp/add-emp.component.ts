@@ -3,7 +3,7 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmpService } from 'src/app/service/emp.service';
 import { ModelService } from 'src/app/service/model.service';
-import { User } from 'src/app/user.class/model';
+import{User} from 'src/app/service/user.class/model';
 @Component({
   selector: 'app-add-emp',
   templateUrl: './add-emp.component.html',
@@ -46,11 +46,23 @@ export class AddEmpComponent implements OnInit {
     this.user.mobile=this.RegForm.value.mobile;
     this.user.username=this.RegForm.value.username;
     this.user.password=this.RegForm.value.password;
+
+
    
     this.ser.create(this.user).subscribe((response)=>
     {console.log(response);},
-    (error=>{console.log(error);}));
+    (error=>{console.log(error);
+     
+      if(error=='Some thing is wrong'){
+        alert("Change Username or Email to continue");
+      }else if(error=='ok'){
+       this.goto();
+      }
+    }));
+    
+    // this.router.navigate(['/admin/view']);
+  }
+  goto(){
     this.router.navigate(['/admin/view']);
-    window.location.reload;
   }
 }

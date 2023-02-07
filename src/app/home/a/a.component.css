@@ -1,0 +1,14 @@
+.example-card {
+    max-width: 400px;
+    left: 110%;
+    margin-top: 20%;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../assets/onlyLogo.jpg');
+    background-size: cover;
+  }
+  mat-card-content{
+    background-color: rgb(247, 238, 226);
+  }
+  

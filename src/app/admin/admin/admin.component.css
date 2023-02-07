@@ -10,6 +10,12 @@ mat-sidenav-content{
     background-color: lightblue;
     color: black;
 }
+/* .toolbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;  
+} */
+
 .main{
 margin-left: 40px;
 }
@@ -22,9 +28,7 @@ mat-icon{
     margin-left: 15px;
     color: black;
 }
-.box{
-    margin-top: 15px;
-}
+
 table{
     margin-top: 100px;
     margin-left: auto;

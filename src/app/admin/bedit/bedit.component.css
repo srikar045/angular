@@ -1,0 +1,44 @@
+.mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }
+  .main{
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 140vh;
+    height: 100vh;
+  }
+
+  input{
+    width: 35%;
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    word-spacing: 1.2;
+    border: 1px solid goldenrod;
+    border-radius: 27%;
+    margin: 3%;
+  }
+
+  .time{
+    text-align: center;
+  }
+
+  .title{
+    text-align: center;
+  }
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding: 2%;
+    width: 50%;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600  ;
+  }
+  td{
+    padding: 4%;
+    margin: 2%;
+  }

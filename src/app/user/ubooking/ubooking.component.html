@@ -1,0 +1,47 @@
+
+<div class="box">
+    <hr>
+    <div class="cont" *ngFor="let book of Book;let i=index">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    <h1 class="hb">Booking ID {{book.bid}}</h1>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <table>
+                    <tr>
+                        <td class="h">Title</td>
+                        <td class="d">: {{book.title}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h" >Start time </td>
+                        <td class="h">: {{book.start | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">End time</td>
+                        <td class="h">: {{book.end | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="h">Created By</td>
+                        <td class="h">: {{book.eid.fname}}.{{book.eid.lname}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Created On</td>
+                        <td class="h">: {{book.createdon | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Updated By</td>
+                        <td class="h">: {{book.updated}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Updated On</td>
+                        <td class="h">: {{book.upatedon | date: 'dd/MM/yyyy hh:mm a'}}</td>
+                    </tr>
+                </table>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

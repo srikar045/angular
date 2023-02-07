@@ -1,0 +1,49 @@
+  mat-card {
+    max-width: 450px;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 30px;
+  }
+    
+  mat-card-title {
+    color: green;
+    font-size: 55px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .box{
+    /* border: 3px solid #fff; */
+    padding: 20px;
+    height: auto;
+    position: relative;
+    overflow: visible;
+  }
+  .view{
+    padding-left: 3% ;
+    margin-left: 90px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    position: relative;
+    width: 38%;
+    float: left;
+    border: 2px solid red;
+    border-radius: 20px;
+  }
+  mat-card-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  table{
+    border: 1px solid goldenrod;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Lato", sans-serif;
+    font-size: large;
+  }
+  td{
+    padding: 15px;
+  }
+ 

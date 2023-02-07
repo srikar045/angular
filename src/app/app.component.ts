@@ -8,5 +8,5 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'work';
   constructor(private router:Router){}
-  
+  book=[1,2,3];
 }

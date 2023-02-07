@@ -1,0 +1,47 @@
+<div class="box">
+    <div class="cont" *ngFor="let roomdata of roomdata;let i=index">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    <h3 class="hd">Room {{i+1}}</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <table>
+                    <tr>
+                        <td class="h">Room ID</td>
+                        <td class="d">: {{roomdata.roomId}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Room Name </td>
+                        <td class="d">: {{roomdata.name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Floor Num</td>
+                        <td class="d">: {{roomdata.floor}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Room Capacity</td>
+                        <td class="d">: {{roomdata.capacity}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Created By</td>
+                        <td class="d">: {{roomdata.created_by}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Created On</td>
+                        <td class="d">: {{roomdata.created_on | date:'dd/MM/yyyy'}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Updated By</td>
+                        <td class="d">: {{roomdata.updated_by}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h">Updated On</td>
+                        <td class="d">: {{roomdata.updated_on | date:'dd/MM/yyyy'}}</td>
+                    </tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

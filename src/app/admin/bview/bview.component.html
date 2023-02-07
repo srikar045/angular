@@ -1,0 +1,97 @@
+<div *ngFor="let book of booking" class="loop">
+    <mat-card class="card">
+        <mat-card-header class="head">
+            <h1>Booking ID :{{book.bid}}</h1>
+        </mat-card-header>
+        <mat-card-content class="data">
+            <table class="table">
+                <tr>
+                    <td class="tdh">
+                        Title 
+                    </td>
+                    <td class="tdd">
+                        : {{book.title}}
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3" class="tdhr">
+                        Room 
+                    </td>
+                    <td class="tds"> ID : {{book.rid.roomId}}</td>
+                </tr>
+                <tr>
+                    <td class="tds">
+                       Floor : {{book.rid.floor}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tds">
+                        Capacity : {{book.rid.capacity}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdh">
+                        StartTime 
+                    </td>
+                    <td class="tdd">
+                       : {{book.start | date: 'dd/MM/yyyy hh:mm a'}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdh">
+                        EndTime 
+                    </td>
+                    <td class="tdd">
+                       : {{book.end | date: 'dd/MM/yyyy hh:mm a'}}
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="tdhr">
+                        Host 
+                    </td>
+                    <td class="tds">
+                         ID : {{book.eid.eid }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tds">
+                         Name : {{book.eid.fname}}.{{book.eid.lname}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdh">
+                        Created Time 
+                    </td>
+                    <td class="tdd">
+                       : {{book.createdon | date: 'dd/MM/yyyy hh:mm a'}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdh">
+                        Edited By 
+                    </td>
+                    <td class="tdd">
+                       : {{book.upated }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdh">
+                        Edited Time 
+                    </td>
+                    <td class="tdd">
+                       : {{book.upatedon | date: 'dd/MM/yyyy hh:mm a'}}
+                    </td>
+                </tr>
+            </table>
+            <mat-card-actions class="action">
+                <button mat-button (click)="handleWarningAlert(book.bid)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-button (click)="edit(book.bid)">  
+                      <mat-icon>edit</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card-content>
+       
+    </mat-card>
+</div>

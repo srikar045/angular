@@ -1,0 +1,91 @@
+/*
+cont
+close
+box
+t
+b
+*/
+body{
+    width: 99%;
+    height: 100vh;
+    margin: 1%;
+    margin-left: 3%;
+   overflow: scroll;
+   overflow-y: scroll;
+}
+.close{
+    cursor: pointer;
+    border: 0.25px solid white;
+    border-radius: 50%;
+    font-size: large;
+    font-weight:600 ;
+    background: white;
+    display: flex;
+    position: absolute;
+    right: 28%;
+    top:15.5%;
+}
+.cont{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 80%;
+}
+.box{
+background-color:rgb(202, 170, 129);
+  width: 40%;
+  height: 75%;
+  margin-left: 33%;
+  margin-top: 5%;
+  border-radius: 10%;
+  padding: 1%;
+}
+h2{
+    padding: 0 0 0 4% ;
+    text-align: center;
+}
+.t{
+    margin-left: 28%;
+    font-size: large;
+   padding: 2%;
+}
+
+.t input{
+    border-radius: 45px;
+    outline: none;
+    background-color: rgb(165, 241, 215);
+    padding: 2%;
+    color: black;
+}
+.t button{
+    margin-left: 14%;
+    background-color: lightcoral;
+    border-radius: 10px 10px;
+    padding: 0.75%;
+    width:20%;
+    color: white;
+    outline: none;
+    font-weight: bold;
+}
+.b{
+    margin-left: 17%;
+    font-size: large;
+padding: 2%;
+}
+.b input{
+    border-radius: 45px;
+    outline: none;
+    background-color: rgb(165, 241, 215);
+    padding: 2%;
+    color: black;
+}
+.b button{
+    margin-left: 25%;
+    background-color: lightcoral;
+    border-radius: 10px 10px;
+    padding: 0.75%;
+    width:20%;
+    color: white;
+    outline: none;
+    font-weight: bold;
+}
